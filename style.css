@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lexend+Deca:wght@100..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lexend+Deca:wght@100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Bree Serif", serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.icon-back {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.icon-back a {
+    color: #FBA834;
+}
+
+.navbar {
+    padding-left: 100px;
+    height: 100px;
+    transition: 0.2s all ease-in;
+}
+
+.navbar .navbar-brand {
+    color: #333A73;
+    font-size: 25px;
+    padding-right: 100px;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.navbar .container-fluid ul {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 250px;
+}
+
+.navbar .container-fluid ul .nav-link {
+    color: #333A73;
+    position: relative;
+    font-family: 'poppins';
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #333A73;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: calc(100% - 20px);
+    left: 10px;
+}
+
+.navbar .logo {
+    color: #333A73;
+}
+
+.navbar span {
+    color: #FBA834;
+}
+
+.navbar:hover {
+    background-color: #fff;
+    transition: 0.2s all ease-in;
+}
+
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/background.jpg');
+    background-position: 500px;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+#home .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#home .container .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 40px;
+    border-radius: 5px;
+    margin-top: -100px;
+    height: 50%;
+    background-color: rgba(221, 221, 222, 0.123);
+    backdrop-filter: blur(5px);
+}
+
+
+#home .container .brand {
+    font-family: "poppins", sans-serif;
+    color: #333A73;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+#home .container .brand-title {
+    color: #000000;
+    font-size: 12px;
+    font-family: 'poppins';
+    width: 50%;
+}
+
+#home .container span {
+    color: #FBA834;
+}
+
+#home .btn {
+    --color: #FBA834;
+    --color2: white;
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+#home .btn::after,
+#home .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+
+#home .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#home .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#home .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+#home .btn:hover {
+    color: var(--color2);
+}
+
+#home .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+.gambar {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.gambar .container {
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+}
+
+.gambar .container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 15px 15px 30px #c1c1c1,
+        -15px -15px 30px #ffffff;
+}
+
+.gambar .container .item:hover {
+    transform: translateY(-10px);
+}
+
+.gambar .container .item .item-title {
+    font-size: 10px;
+    color: gray;
+}
+
+.gambar .container .item img {
+    width: 150px;
+    height: 150px;
+}
+
+#service {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#service .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: #f9f9f9;
+    box-shadow: 15px 15px 30px #c1c1c1,
+        -15px -15px 30px #ffffff;
+}
+
+#service .container .image img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 500px;
+    border-radius: 5px;
+}
+
+#service .container .text {
+    width: 50%;
+    padding: 30px;
+}
+
+#service .container .text .text-title {
+    font-family: 'poppins';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#service .container .text .text-dec {
+    font-family: 'poppins';
+    font-size: 15px;
+}
+
+#service button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#service button {
+    --primary-color: #111;
+    --hovered-color: #FBA834;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#service button p {
+    margin: 0;
+    position: relative;
+    font-size: 10px;
+    font-family: 'poppins';
+    color: var(--primary-color);
+}
+
+#service button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+#service button p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "Read More";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+#service button:hover::after {
+    width: 100%;
+}
+
+#service button:hover p::before {
+    width: 100%;
+}
+
+#service button:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+}
+
+#service button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+
+
+#testimoni {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#testimoni .card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 20/9;
+    background-color: #f5d59d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#testimoni .card img {
+    width: 508px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#testimoni .card__image {
+    width: 100%;
+    height: 100%;
+}
+
+#testimoni .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+#testimoni .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(242, 242, 242, 0.8);
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#testimoni .card__content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#testimoni .card:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+#testimoni .card__title {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+#testimoni .card:hover svg {
+    scale: 0;
+}
+
+#testimoni .card__description {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+    text-align: center;
+    width: 50%;
+}
+
+#paket .container .button {
+    --color: #FBA834;
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+#paket .container .button::after,
+#paket .container .button::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+
+#paket .container .button::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#paket .container .button:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+#paket .container .button:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+#paket .container .button:hover {
+    color: var(--color2);
+}
+
+#paket .container .button:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+#testimoni .secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #777;
+}
+
+
+#paket .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#paket .container .plan {
+    border-radius: 16px;
+    padding: 10px;
+    max-width: 300px;
+}
+
+
+#paket .container .plan .inner {
+    align-items: center;
+    padding: 20px;
+    padding-top: 40px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 26px 26px 52px #bebebe,
+        -26px -26px 52px #ffffff;
+}
+
+#paket .container .plan .pricing {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333A73;
+    border-radius: 99em 0 0 99em;
+    display: flex;
+    align-items: center;
+    padding: 0.625em 0.75em;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#paket .container .plan .pricing small {
+    color: #ffffff;
+    font-size: 0.75em;
+    margin-left: 0.25em;
+}
+
+#paket .container .plan .title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #425675;
+}
+
+#paket .container .plan .title+* {
+    margin-top: 0.75rem;
+}
+
+#paket .container .plan .info+* {
+    margin-top: 1rem;
+}
+
+#paket .container .plan .features {
+    display: flex;
+    flex-direction: column;
+    margin-left: -20px;
+}
+
+#paket .container .plan .features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#paket .container .plan .features li+* {
+    margin-top: 0.75rem;
+}
+
+#paket .container .plan .features .icon {
+    background-color: #1FCAC5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+
+#paket .container .plan .features .icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+#paket .container .plan .features+* {
+    margin-top: 1.25rem;
+}
+
+#paket .container .plan .action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#paket .container .plan .button {
+    background-color: #6558d3;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 0.625em 0.75em;
+    text-decoration: none;
+}
+
+#paket .container .plan .button:hover,
+#paket .container .plan .button:focus {
+    background-color: #FBA834;
+}
+
+#tambahan .container .item {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 25px;
+    border-radius: 10px;
+    border-radius: 10px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    box-shadow: 21px 21px 41px #c2c2c2,
+        -21px -21px 41px #ffffff;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#tambahan .container .item:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+#tambahan .container .item .brand {
+    width: 80%;
+}
+
+#tambahan .container .item .btn {
+    background-color: #333A73;
+    color: #fff;
+}
+
+#footer .container a,
+h5,
+input,
+button,
+p {
+    font-family: 'poppins';
+}
+
+#footer .col-4 .btn {
+    background-color: #333A73;
+    color: #fff;
+}
+
+#footer .col-2 h5 {
+    font-weight: bold;
+}
+
+#footer .col-2 .nav-link {
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #service .container .text {
+        width: 100%;
+    }
+
+    .navbar .container-fluid ul {
+        padding-left: 20px;
+    }
+
+    #paket .container .plan {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 993px) {
+    .navbar .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar .navbar-toggler {
+        background-color: #333A73;
+        margin-right: 20px;
+    }
+
+    .navbar .container-fluid ul {
+        padding-left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 870px) {
+    .navbar {
+        padding-left: 50px;
+    }
+
+    .navbar .navbar-toggler {
+        background-color: #333A73;
+        margin-right: 15px;
+    }
+
+    .navbar .container-fluid ul {
+        padding-left: 20px;
+    }
+
+    .navbar-nav {
+        background-color: #fff;
+        position: relative;
+        z-index: 99999;
+    }
+
+    .navbar .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar .navbar-brand {
+        padding-left: 20px;
+    }
+
+    #home {
+        background-size: cover;
+        background-position: 400px;
+    }
+
+    #home .container .header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding-right: 20px;
+    }
+
+    #home .container .header .brand-title {
+        font-size: 20px;
+        width: 70%;
+    }
+
+    #service .container .text {
+        width: 100%;
+    }
+
+    #paket .text-center {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #paket .container .plan {
+        max-width: 70%;
+        height: 100%;
+    }
+
+    #tambahan .container .item svg {
+        width: 200px;
+    }
+
+    #footer .container footer .row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #footer .container footer .row form {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .navbar {
+        margin-left: -50px;
+    }
+
+    .navbar-nav {
+        background-color: #fff;
+    }
+
+    .navbar .nav-link {
+        font-size: 15px;
+        padding-left: 40px;
+        position: relative;
+        z-index: 111;
+    }
+
+    .nav-link:hover::after {
+        display: none;
+    }
+
+    #home {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home .container .header .brand-title {
+        color: #fff;
+        width: 100%;
+    }
+
+    #service .container .image img {
+        width: 400px;
+    }
+
+    #paket .container .plan {
+        max-width: 100%;
+    }
+
+    #testimoni .container .card img {
+        width: 200px;
+    }
+
+    #testimoni .container .text .card__title {
+        font-size: 10px;
+    }
+
+    #testimoni .container .text .card__description {
+        font-size: 8px;
+    }
+
+    #tambahan .gambar .container {
+        flex-wrap: wrap;
+    }
+
+    #tambahan .gambar .container .item {
+        width: 100%;
+    }
+
+    #tambahan .container .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer .container footer {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .navbar {
+        margin-left: -50px;
+    }
+
+    .navbar-nav {
+        background-color: #fff;
+    }
+
+    .navbar .nav-link {
+        font-size: 15px;
+        padding-left: 40px;
+        position: relative;
+        z-index: 111;
+    }
+
+    #home {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home .container .header .brand-title {
+        color: #fff;
+        width: 100%;
+    }
+
+    #service .container .image img {
+        width: 400px;
+    }
+
+    #paket .container .plan {
+        max-width: 100%;
+    }
+
+    #testimoni .container .card img {
+        width: 200px;
+    }
+
+    #testimoni .container .text .card__title {
+        font-size: 10px;
+    }
+
+    #testimoni .container .text .card__description {
+        font-size: 8px;
+    }
+
+    #tambahan .gambar .container {
+        flex-wrap: wrap;
+    }
+
+    #tambahan .gambar .container .item {
+        width: 100%;
+    }
+
+    #tambahan .container .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer .container footer {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        margin-left: -50px;
+    }
+
+    .navbar-nav {
+        background-color: #fff;
+    }
+
+    .navbar .nav-link {
+        font-size: 15px;
+        padding-left: 40px;
+        position: relative;
+        z-index: 111;
+    }
+
+
+    #home {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home .container .header .brand-title {
+        color: #fff;
+        width: 100%;
+    }
+
+    #service .container .image img {
+        width: 400px;
+    }
+
+    #paket .container .plan {
+        max-width: 100%;
+    }
+
+    #testimoni .container .card img {
+        width: 200px;
+    }
+
+    #testimoni .container .text .card__title {
+        font-size: 10px;
+    }
+
+    #testimoni .container .text .card__description {
+        font-size: 8px;
+    }
+
+    #tambahan .gambar .container {
+        flex-wrap: wrap;
+    }
+
+    #tambahan .gambar .container .item {
+        width: 100%;
+    }
+
+    #tambahan .container .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer .container footer {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar {
+        margin-left: -50px;
+    }
+
+    .navbar-nav {
+        background-color: #fff;
+    }
+
+    .navbar .nav-link {
+        font-size: 15px;
+        padding-left: 40px;
+        position: relative;
+        z-index: 111;
+    }
+
+    .nav-link:hover::after {
+        display: none;
+    }
+
+    #home {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home .container .header .brand {
+        font-size: 23px;
+    }
+
+    #home .container .header .brand-title {
+        color: #fff;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #service .container .image img {
+        width: 400px;
+    }
+
+    #paket .container .plan {
+        max-width: 100%;
+    }
+
+    #testimoni .container .card img {
+        width: 200px;
+    }
+
+    #testimoni .container .text .card__title {
+        font-size: 10px;
+    }
+
+    #testimoni .container .text .card__description {
+        font-size: 8px;
+    }
+
+    #tambahan .gambar .container {
+        flex-wrap: wrap;
+    }
+
+    #tambahan .gambar .container .item {
+        width: 100%;
+    }
+
+    #tambahan .container .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer .container footer {
+        padding-left: 20px;
+    }
+
+    #footer .bawah {
+        flex-direction: column;
+        align-items: start;
+    }
+}
